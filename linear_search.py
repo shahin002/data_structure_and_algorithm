@@ -3,18 +3,18 @@ Algorithm Name: Linear Search
 The time complexity of above algorithm is O(n).
 """
 
+# Desired List
+arr = [4, 2, 7, 5, 12, 54, 21, 64, 12, 32]
 
-def search(arr, x):
-    for i in range(len(arr)):
-        if arr[i] == x:
-            return i
-    return -1
+# Searching Item
+x = 22
 
+found = False
 
-nlist = [4, 2, 7, 5, 12, 54, 21, 64, 12, 32]
-search_item = 21
-result = search(nlist, search_item)
-if result == -1:
-    print(search_item, " is not in the list")
-else:
-    print(search_item, " is found in the list at index ", result)
+for i in range(len(arr)):
+    if arr[i] == x:
+        found = True
+        print(x, " is found in the list at index ", i)
+        break
+if found == False:
+    print(x, " is not found in the list")
